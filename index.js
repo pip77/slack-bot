@@ -3,8 +3,6 @@ var config = require('./config/all.json');
 var SlackBot = require('slackbots');
 var Slack = require('slack-node');
 
-console.log(config);
-
 slack = new Slack(config.slack.token.api);
 var bot = new SlackBot({
     token: config.slack.token.bot,  
@@ -29,19 +27,19 @@ bot.on('message', function(message) {
                 bot.postMessageToChannel(config.slack.channel, config.slack.msg.nothing);
               } else {
                 for(var i=0; i < response.files.length; i++) {
-                console.log(i);
-                console.log(response.files[i]);
-
-                slack.api("files.delete", {
-                  file: response.files[i].id
-                }, function(err, response) {
-                    console.log(response);
-                });
-
-                if(i == response.files.length-1)
-                    bot.postMessageToChannel(config.slack.channel, config.slack.msg.done);
+                    console.log(i);
+                    console.log(response.files[i]);
+    
+                    slack.api("files.delete", {
+                      file: response.files[i].id
+                    }, function(err, response) {
+                        console.log(response);
+                    });
+    
+                    if(i == response.files.length-1)
+                        bot.postMessageToChannel(config.slack.channel, config.slack.msg.done);
+                    }
                 }
-              }
             });
         }
     }
