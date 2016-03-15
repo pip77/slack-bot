@@ -1,9 +1,10 @@
 {
-  "name": "slack",
+  "name": "slack-bot",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "index.coffee",
   "dependencies": {
+    "coffee-script": "~1.7.1",
   	"slack-node": "0.2.0",
   	"slackbots": "0.5.1"
   },
