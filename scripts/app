@@ -1,0 +1,2 @@
+#! /bin/bash
+NODE_ENV=local nodemon --verbose --delay 0 --ext 'js coffee json' index.coffee app
