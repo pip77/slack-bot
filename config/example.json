@@ -1,20 +1,17 @@
 {
   "slack": {
-    "token": {
-    	"api": "yourtoken",
-    	"bot": "yourtoken"
-    },
-    "botsName": "lumpy",
-    "channel": "general",
-    "trigger": "räum auf",
-    "msg": {
-    	"done": "Dateien gelöscht, alles sauber!",
-    	"nothing": "Gibt nichts aufzuräumen."
+    "token": ""
+  },
+  "bot": {
+    "cleaner": {
+      "name": "lumpy",
+      "token": "",
+      "channel": "general",
+      "trigger": "räum auf",
+      "msg": {
+          "done": "Dateien gelöscht, alles sauber!",
+          "nothing": "Gibt nichts aufzuräumen."
+      }
     }
-  }
-}{
-  "slack": {
-    "api": "0123456789",
-    "bot": "0123456789"
   }
 }

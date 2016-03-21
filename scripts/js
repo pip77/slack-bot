@@ -1,2 +1,0 @@
-#! /bin/bash
-coffee -o public/javascript -cwb lib/assets/javascript
