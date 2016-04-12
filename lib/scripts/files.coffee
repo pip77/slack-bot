@@ -3,7 +3,7 @@ config	= require('../../config/all.json')
 util		= require('util')
 Slack		= require('slack-node')
 
-slack 	= new Slack("xoxp-2484893673-11688680993-32745169284-ade6aa278b")
+slack 	= new Slack(config.slack.token)
 
 module.exports = Files =
 
